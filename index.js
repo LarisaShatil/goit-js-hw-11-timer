@@ -16,7 +16,6 @@ class CountdownTimer {
   this.currentDate = null;
   this.startTimer = this.startTimer.bind(this);
     
-  document.addEventListener('DOMContentLoaded', this.startTimer);
   };
   
 calc() {
@@ -24,8 +23,8 @@ calc() {
   const targetDate = new Date(2021, 8, 1);
   const time = targetDate - this.currentDate;
   if (time <= 0) {
-      return
-      // clearInterval(this.id);
+    clearInterval(this.id);
+    return
     }
   const days = Math.floor(time / (1000 * 60 * 60 * 24));
   const hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -39,7 +38,7 @@ calc() {
   };
 
   startTimer() {
-     this.currentDate = Date.now();
+    this.currentDate = Date.now();
     this.id = setInterval(this.calc.bind(this), 1000);
   };
   
@@ -48,8 +47,10 @@ calc() {
 
 const holidayTimer = new CountdownTimer({
   selector: '#timer-1',
-  // targetDate: new Date('Sept 17, 2021'),
+  targetDate: new Date(2021, 8, 1),
 });
+
+window.addEventListener("DOMContentLoaded", holidayTimer.startTimer);
 
 
 
