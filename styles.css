@@ -1,8 +1,13 @@
+body {
+  /* background-image: url(https://assets.entrepreneur.com/content/3x2/2000/1413404531-how-not-waste-time.jpg?width=1100&crop=2:1); */
+  background-image: url(https://c0.wallpaperflare.com/preview/892/549/236/time-clock-alarm-clock-pastel-colors.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+}
 .timer {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 48px;
 }
 .field {
   text-align: center;
@@ -12,7 +17,14 @@
   margin-right: 10px;
   padding-bottom: 15px;
 }
-
+.value {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 55px;
+  font-weight: 600;
+}
 .label {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 28px;
+  font-weight: 700;
   display: block;
 }
