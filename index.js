@@ -47,7 +47,7 @@ calc() {
 
 const holidayTimer = new CountdownTimer({
   selector: '#timer-1',
-  targetDate: new Date(2021, 8, 1),
+  targetDate: new Date(2021, 11, 31),
 });
 
 window.addEventListener("DOMContentLoaded", holidayTimer.startTimer);
