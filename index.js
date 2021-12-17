@@ -20,7 +20,7 @@ class CountdownTimer {
   
 calc() {
   this.currentDate = Date.now();
-  const targetDate = new Date(2021, 11, 31);
+  const targetDate = new Date(2022, 0, 1);
   const time = targetDate - this.currentDate;
   if (time <= 0) {
     clearInterval(this.id);
